@@ -32,9 +32,9 @@ The policy is for 1 year, original premium is £100 and the discounted premium i
 
 5. (i) Scenario 1 No Claim: 1 year later the policy expires without a claim being made. 99 NCB tokens created and are transfered to the customers account (Customer must request the tokens).
 
-5. (ii) Scenario 2 Claim made: No NCB tokens are created or transfer.  No action is required.
+5. (ii) Scenario 2 Claim made: No NCB tokens are created or transfered.  No action is required.
 
-5. (iii) Scenario 3 Policy cancelled: Insurer records the total amount of premium paid (if any).  If no claim has occured NCB tokens are created and transfered based on the actual premium paid.  Example: only £10 premium was collected before the policy was cancelled, no claims occured.  10 NCB tokens are created and transfered to the customer.
+5. (iii) Scenario 3 Policy cancelled: Insurer records the total amount of premium paid - if any.  If no claim has occured NCB tokens are created and transfered based on the actual premium paid.  Example: only £10 premium was collected before the policy was cancelled, no claims occured.  10 NCB tokens are created and transfered to the customer.
 
 #### Value
 NCB tokens are a high level abstraction of potential customers claim history.  
@@ -61,6 +61,11 @@ A fee could be charged to verify an insurance providers credibility.
 
 A method to monitor and possibly ban insurance providers if they create NCB
 tokens but do not except them.
+
+#### Weak points
+The contract relies on the fact that all insurance providers must use the same 
+currency unit when registering a policy with the contract.  Inconsistant use
+of a currency amount would render the value of NCB tokens unknowable.  
 
 #### Possible Expansion
 This solution could easily be adapted to present detials of a customers premium
