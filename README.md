@@ -65,7 +65,7 @@ tokens but do not except them.
 #### Weak points
 The contract relies on the fact that all insurance providers must use the same 
 currency unit when registering a policy with the contract.  Inconsistant use
-of a currency amount would render the value of NCB tokens unknowable.  
+of currencies would render the value of NCB tokens unknowable.  
 
 #### Possible Expansion
 This solution could easily be adapted to present detials of a customers premium
