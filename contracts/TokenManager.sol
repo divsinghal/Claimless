@@ -13,7 +13,8 @@ contract TokenManager {
 	mapping(address => uint256) consumerTokensMap;
 	mapping(uint256 => Policy) policyNumberPolicyMap;
 
-	function policyPurchased(uint256 _policyNo, address _consumer, uint256 _duration, uint256 _totalPremium){
+	function policyPurchased(uint256 _policyNo, address _consumer, 
+		uint256 _duration, uint256 _totalPremium) returns (bool successful) {
 
 		policyNumberPolicyMap[_policyNo] =  Policy({
 				consumer : _consumer,
@@ -23,6 +24,7 @@ contract TokenManager {
 				claimMade : false		
 			});
 
+		return true;
 	}
 
 	function policyClaimMade(uint256 _policyNo){
@@ -47,4 +49,25 @@ contract TokenManager {
 			consumerTokensMap[consumer] += policy.totalPremium/100;
 		}
 	}
+
+	function getPolicy(uint _policyNo)
+		constant
+		returns(
+		address consumer,
+		uint256 policyNo,
+		uint256 duration,
+		uint256 totalPremium,
+		bool claimMade) {
+
+		Policy policy = policyNumberPolicyMap[_policyNo];
+
+		return (
+			policy.consumer,
+			policy.policyNo,
+			policy.duration,
+			policy.totalPremium,
+			policy.claimMade
+		);
+	}
+
 }
