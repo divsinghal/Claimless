@@ -59,7 +59,7 @@ verified insurance providers only.
 
 A fee could be charged to verify an insurance providers credibility.
 
-A method to monitor and possible ban insurance providers if the create NCB
+A method to monitor and possibly ban insurance providers if they create NCB
 tokens but do not except them.
 
 #### Possible Expansion
