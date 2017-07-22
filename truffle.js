@@ -4,8 +4,12 @@ module.exports = {
     "app.js": [
       "javascripts/app.js"
     ],
+    "tokenManager.js": [
+      "javascripts/vendor/angular.js",
+      "javascripts/tokenManagerController.js"
+    ],
     "app.css": [
-      "stylesheets/app.css"
+      "stylesheets/styles.css"
     ],
     "images/": "images/"
   },
