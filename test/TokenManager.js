@@ -27,10 +27,10 @@ contract("TokenManager",function(accounts) {
 	it("should be able to register purchase of a policy ", function(){
 		var tokenManager = TokenManager.deployed();
 
-		return tokenManager.policyPurchased.call(123,accounts[0],10,100)
+		return tokenManager.policyPurchased.call(123,10,100,{from : accounts[0]})
 			.then(function(successful){
 				assert.isTrue(successful,"Purcahse notification should be successful");
-				return tokenManager.policyPurchased(123,accounts[0],10,100);
+				return tokenManager.policyPurchased(123,10,100,{from : accounts[0], gas: 3000000});
 			})
 			.then(function(tx) {
 		    	return Promise.all([
@@ -41,7 +41,6 @@ contract("TokenManager",function(accounts) {
 		    	return tokenManager.getPolicy.call(123);
 		    })
 			.then(function(values){
-			
 				assert.equal(accounts[0],values[0],"this should be the address of the consumer");
 				assert.equal(123, values[1].valueOf(),"this should be policy number");
 				assert.equal(10, values[2].valueOf(),"this should be duration");
