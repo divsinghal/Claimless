@@ -1,3 +1,5 @@
+
+
 ﻿<!doctype html>
 <html lang="en">
 <head>
@@ -14,7 +16,7 @@
 
 </head>
 
-<body ng-app="tokenManager" ng-controller="tokenManagerController" class="stl-consumer">
+<body ng-app="tokenManager" ng-controller="tokenManagerController">
 
   <div class="app-header">
     <div class="app-header-inner">
@@ -25,14 +27,14 @@
   <div class="app-nav">
     <div class="app-nav-inner">
       <ul class="nav-list">
-        <li><a href="AddNewInsurer.html" target="_self">Add New Insurer</a></li>
+        <li class="selected"><a href="AddNewInsurer.html" target="_self">Add New Insurer</a></li>
         <span class="spacer"></span>
         <li><a href="Purchase.html" target="_self">Purchase</a></li>
         <li><a href="Claim.html" target="_self">Claim</a></li>
         <li><a href="Expire.html" target="_self">Expire</a></li>
         <li><a href="Cancellation.html" target="_self">Cancellation</a></li>
         <span class="spacer"></span>
-        <li class="selected"><a href="CustomerBalance.html" target="_self">Customer Balance</a></li>
+        <li><a href="CustomerBalance.html" target="_self">Customer Balance</a></li>
       </ul>
     </div>
   </div>
@@ -40,23 +42,24 @@
   <div class="app-body">
 
     <div class="illustration-container">
-      <div class="illustration claim"></div>
+      <div class="illustration new"></div>
     </div>
 
-    <h1 class="page-title">Customer Balance</h1>
+    <h1 class="page-title">Add New Insurer</h1>
 
   <fieldset>
 
     <div>
-      <label>Customer Adress</label>
-      <input type="text" id="id" ng-model="consumer" placeholder="placeholder">
+      <label>Company Name</label>
+      <input type="text" id="id" ng-model="comapanyName" placeholder="placeholder">
     </div>
 
-    <button class="btn" ng-click="getTokenBalance(consumer)">Button</button>
-
-    <div class="stl-consumer">
-      <label>You total balance is </label><span id="tokensHeld" ng-model="tokensHeld"></span>
+    <div>
+      <label>Company Key</label>
+      <input type="text" id="id" ng-model="comppanyKey" placeholder="placeholder">
     </div>
+
+     <button class="btn" ng-click="addInsurer(comapanyName,comppanyKey)">Button</button>
 
 </fieldset>
   </div>

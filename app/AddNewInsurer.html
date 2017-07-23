@@ -12,32 +12,47 @@
 
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900" rel="stylesheet">
 
-  <!-- TEMP CSS FOR DEV -->
-  <style type="text/css">
-    .btn {
-      margin-right: 10px;
-      margin-bottom: 10px;
-    }
-  </style>
 </head>
 
 <body ng-app="tokenManager" ng-controller="tokenManagerController">
 
   <div class="app-header">
     <div class="app-header-inner">
-      <h1 class="header-logo">Claimless</h1>
+      <h1 class="header-logo"><a href="index.html" target="_self">Claimless</a></h1>
     </div>
   </div>
+
+  <div class="app-nav">
+    <div class="app-nav-inner">
+      <ul class="nav-list">
+        <li class="selected"><a href="AddNewInsurer.html" target="_self">Add New Insurer</a></li>
+        <span class="spacer"></span>
+        <li><a href="Purchase.html" target="_self">Purchase</a></li>
+        <li><a href="Claim.html" target="_self">Claim</a></li>
+        <li><a href="Expire.html" target="_self">Expire</a></li>
+        <li><a href="Cancellation.html" target="_self">Cancellation</a></li>
+        <span class="spacer"></span>
+        <li><a href="CustomerBalance.html" target="_self">Customer Balance</a></li>
+      </ul>
+    </div>
+  </div>
+
   <div class="app-body">
-    <img src="images/logo.svg">
+
+    <div class="illustration-container">
+      <div class="illustration new"></div>
+    </div>
+
+    <h1 class="page-title">Add New Insurer</h1>
+
   <fieldset>
 
-    <div class="stl-insurer">
+    <div>
       <label>Company Name</label>
       <input type="text" id="id" ng-model="comapanyName" placeholder="placeholder">
     </div>
 
-    <div class="stl-consumer">
+    <div>
       <label>Company Key</label>
       <input type="text" id="id" ng-model="comppanyKey" placeholder="placeholder">
     </div>

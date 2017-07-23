@@ -4,8 +4,9 @@ module.exports = {
     "Expire.html":"Expire.html",
     "Claim.html":"Claim.html",
     "Cancellation.html":"Cancellation.html",
-    "CustomerBalance.html":"CustomerBalance.html",
-
+    "AddNewInsurer.html": "AddNewInsurer.html",
+    "CustomerBalance.html": "CustomerBalance.html",
+    "Purchase.html": "Purchase.html",
     "app.js": [
       "javascripts/app.js"
     ],
