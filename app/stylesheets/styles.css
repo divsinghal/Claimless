@@ -472,7 +472,7 @@ body {
   margin-right: auto;
   padding-left: 3rem;
   padding-right: 3rem;
-  max-width: 840px;
+  max-width: 900px;
 }
 
 @media (min-width: 740px) {
@@ -492,7 +492,7 @@ body {
   .app-footer-inner,
   .app-header-inner,
   .app-nav-inner {
-    max-width: 1020px;
+    max-width: 1060px;
   }
 }
 
@@ -603,10 +603,15 @@ a {
 .customer-balance h2 {
   color: #4e697f;
   font-weight: 200;
+  display: inline-block;
 }
 
-/* line 84, src/sass/_type.scss */
-.customer-balance span {
+/* line 85, src/sass/_type.scss */
+.customer-balance input[type=text] {
+  border: 0;
+  box-shadow: none !important;
+  display: inline;
+  width: auto;
   color: #051f36;
   font-size: 3.4rem;
   font-weight: 600;

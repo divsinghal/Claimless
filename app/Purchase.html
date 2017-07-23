@@ -14,7 +14,7 @@
 
 </head>
 
-<body ng-app="tokenManager" ng-controller="tokenManagerController" class="stl-insurer">
+<body ng-app="tokenManager" ng-controller="tokenManagerController" class="stl-consumer">
 
   <div class="app-header">
     <div class="app-header-inner">
@@ -65,11 +65,6 @@
     <div>
       <label>Duration</label>
       <input type="text" id="id" ng-model="duration">
-    </div>
-
-    <div>
-      <label>Tokens to be redeemed</label>
-      <input type="text" id="id" ng-model="tokensToBeRedeemed">
     </div>
 
     <button class="btn" ng-click="policyPurchased(consumer,policyNo,duration,totalPremium,tokensToBeRedeemed)">Purchase</button>
