@@ -70,4 +70,11 @@ contract TokenManager {
 		);
 	}
 
+	function getTokenBalance(address consumer) 
+		constant
+		returns (
+		uint256 tokensHeld) {
+		tokensHeld = consumerTokensMap[consumer];
+		return tokensHeld;
+	}
 }

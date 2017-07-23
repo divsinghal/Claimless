@@ -4,6 +4,7 @@ module.exports = {
     "Expire.html":"Expire.html",
     "Claim.html":"Claim.html",
     "Cancellation.html":"Cancellation.html",
+    "CustomerBalance.html":"CustomerBalance.html",
 
     "app.js": [
       "javascripts/app.js"

@@ -30559,6 +30559,18 @@ app.controller("tokenManagerController", [ '$scope', '$location', '$http', '$q',
         console.log("values[3] "+values[3].valueOf());      
         console.log("values[4] "+values[4]);      
       });
+  }
+
+  
+  $scope.getTokenBalance = function(consumer) {
+    console.log("getTokenBalance called with address "+consumer);
+
+    var tokenManager  = TokenManager.deployed();
+
+    tokenManager.getTokenBalance.call(consumer)
+    .then(function(count){
+      console.log("count "+count.valueOf());
+    });
 
   }
 
