@@ -512,7 +512,7 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-@media (min-width: 740px) {
+@media (min-width: 860px) {
   /* line 1, src/sass/_type.scss */
   html {
     font-size: 12px;
@@ -760,10 +760,16 @@ button.btn-disabled,
 
 /* line 17, src/sass/_header.scss */
 .header-logo {
-  color: #fff;
   margin: 1.4rem 0;
   height: 4rem;
   font-size: 3.4rem;
+}
+
+/* line 22, src/sass/_header.scss */
+.header-logo a {
+  color: #fff;
+  font-weight: 900;
+  text-decoration: none;
 }
 
 /* line 1, src/sass/_nav.scss */
