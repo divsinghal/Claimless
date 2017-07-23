@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <base href="." />
+  <link href="./app.css" rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+  <script src="./tokenManager.js"></script>
+
+  <title>Claimless</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900" rel="stylesheet">
+
+  <!-- TEMP CSS FOR DEV -->
+  <style type="text/css">
+    .btn {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body ng-app="tokenManager" ng-controller="tokenManagerController">
+
+  <div class="app-header">
+    <div class="app-header-inner">
+      <h1 class="header-logo">Claimless</h1>
+    </div>
+  </div>
+  <div class="app-body">
+    <img src="images/logo.svg">
+  <fieldset>
+
+    <div class="stl-insurer">
+      <label>Company Name</label>
+      <input type="text" id="id" ng-model="comapanyName" placeholder="placeholder">
+    </div>
+
+    <div class="stl-consumer">
+      <label>Company Key</label>
+      <input type="text" id="id" ng-model="comppanyKey" placeholder="placeholder">
+    </div>
+
+     <button class="btn" ng-click="addInsurer(comapanyName,comppanyKey)">Button</button>
+
+</fieldset>
+  </div>
+
+  <div class="app-footer">
+    <div class="app-footer-inner">
+      <span class="hackathon-copy">Created as part of the <a href="http://breaktheblock.simplybusiness.co.uk/">Break The Block</a> Hackathon hosted by <a href="http://www.simplybusiness.co.uk/">Simply Business</a></span>
+
+      <span class="created-with">Created by...</span>
+
+      <ul class="team-members">
+        <li><span><a href="https://github.com/divsinghal">Divya Singhal</a></span></li>
+        <li><span><a href="https://github.com/KelvinVail">Kelvin Vail</a></span></li>
+        <li><span><a href="https://github.com/bprakash14">Bhanu</a></span></li>
+        <li><span><a href="https://github.com/Govindaraju">Govind</a></span></li>
+        <li><span><a href="https://github.com/markdurrant">Mark Durrant</a></span></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
