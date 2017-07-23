@@ -594,6 +594,24 @@ a {
   font-size: 3.4rem;
 }
 
+/* line 76, src/sass/_type.scss */
+.customer-balance {
+  margin-top: 3rem;
+}
+
+/* line 79, src/sass/_type.scss */
+.customer-balance h2 {
+  color: #4e697f;
+  font-weight: 200;
+}
+
+/* line 84, src/sass/_type.scss */
+.customer-balance span {
+  color: #051f36;
+  font-size: 3.4rem;
+  font-weight: 600;
+}
+
 /* line 1, src/sass/_forms.scss */
 fieldset {
   border: 0;
@@ -823,7 +841,7 @@ button.btn-disabled,
   background: #f4f5f7;
   padding-top: 3rem;
   padding-bottom: 6rem;
-  margin-top: 8rem;
+  margin-top: 20rem;
   text-align: center;
 }
 
