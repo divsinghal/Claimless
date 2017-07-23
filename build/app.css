@@ -896,7 +896,7 @@ button.btn-disabled,
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 2rem;
-  background-image: url("/assets/icon-policy.svg");
+  background-image: url("/images/icon-policy.svg");
   background-repeat: no-repeat;
   overflow: hidden;
 }
@@ -919,15 +919,15 @@ button.btn-disabled,
 
 /* line 49, src/sass/_illustration.scss */
 .illustration.new {
-  background-image: url("/assets/icon-new.svg");
+  background-image: url("/images/icon-new.svg");
 }
 
 /* line 53, src/sass/_illustration.scss */
 .illustration.claim {
-  background-image: url("/assets/icon-claim.svg");
+  background-image: url("/images/icon-claim.svg");
 }
 
 /* line 57, src/sass/_illustration.scss */
 .illustration.cancel {
-  background-image: url("/assets/icon-cancel.svg");
+  background-image: url("/images/icon-cancel.svg");
 }
