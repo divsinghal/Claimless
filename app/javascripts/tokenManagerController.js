@@ -40,7 +40,7 @@ app.controller("tokenManagerController", [ '$scope', '$location', '$http', '$q',
 
     var tokenManager  = TokenManager.deployed();
 
-     return tokenManager.policyPurchased(policyNo,duration,totalPremium,{from : consumer, gas: 3000000})
+     return tokenManager.policyPurchased(policyNo,consumer,duration,totalPremium,{from : accounts[0], gas: 3000000})
      .then(function(tx) {
           return Promise.all([
               getTransactionReceiptMined(tx)

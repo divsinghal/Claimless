@@ -13,11 +13,11 @@ contract TokenManager {
 	mapping(address => uint256) consumerTokensMap;
 	mapping(uint256 => Policy) policyNumberPolicyMap;
 
-	function policyPurchased(uint256 _policyNo, 
+	function policyPurchased(uint256 _policyNo, address _consumer,
 		uint256 _duration, uint256 _totalPremium) returns (bool successful) {
 
 		policyNumberPolicyMap[_policyNo] =  Policy({
-				consumer : msg.sender,
+				consumer : _consumer,
 				policyNo : _policyNo,
 				duration : _duration,
 				totalPremium : _totalPremium,
