@@ -498,7 +498,7 @@ body {
 
 /* line 27, src/sass/_layout.scss */
 .app-body {
-  margin-top: 18rem;
+  margin-top: 14rem;
 }
 
 /* line 1, src/sass/_type.scss */
@@ -748,7 +748,17 @@ button.btn-disabled,
   z-index: 1;
 }
 
-/* line 9, src/sass/_header.scss */
+/* line 8, src/sass/_header.scss */
+.stl-insurer .app-header {
+  background-color: #6ed468;
+}
+
+/* line 12, src/sass/_header.scss */
+.stl-consumer .app-header {
+  background-color: #35a9ff;
+}
+
+/* line 17, src/sass/_header.scss */
 .header-logo {
   color: #fff;
   margin: 1.4rem 0;
@@ -766,19 +776,29 @@ button.btn-disabled,
   z-index: 1;
 }
 
-/* line 11, src/sass/_nav.scss */
+/* line 9, src/sass/_nav.scss */
+.stl-insurer .app-nav {
+  background-color: #b7eab4;
+}
+
+/* line 13, src/sass/_nav.scss */
+.stl-consumer .app-nav {
+  background-color: #9ad4ff;
+}
+
+/* line 19, src/sass/_nav.scss */
 .nav-list li {
   display: inline-block;
   margin-right: 1.4rem;
   transition: box-shadow .3s ease-in-out;
 }
 
-/* line 16, src/sass/_nav.scss */
+/* line 24, src/sass/_nav.scss */
 .nav-list li.selected, .nav-list li:hover {
   box-shadow: inset 0 -0.4rem 0 0 #123b5e;
 }
 
-/* line 22, src/sass/_nav.scss */
+/* line 30, src/sass/_nav.scss */
 .nav-list a {
   display: inline-block;
   text-decoration: none;
