@@ -139,6 +139,7 @@ app.controller("tokenManagerController", [ '$scope', '$location', '$http', '$q',
     tokenManager.getTokenBalance.call(consumer)
     .then(function(count){
       console.log("count "+count.valueOf());
+        $scope.tokensHeld = count.valueOf();
     });
 
   }
