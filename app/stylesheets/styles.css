@@ -466,7 +466,8 @@ body {
 /* line 7, src/sass/_layout.scss */
 .app-body,
 .app-footer-inner,
-.app-header-inner {
+.app-header-inner,
+.app-nav-inner {
   margin-left: auto;
   margin-right: auto;
   padding-left: 3rem;
@@ -478,7 +479,8 @@ body {
   /* line 7, src/sass/_layout.scss */
   .app-body,
   .app-footer-inner,
-  .app-header-inner {
+  .app-header-inner,
+  .app-nav-inner {
     padding-left: 6rem;
     padding-right: 6rem;
   }
@@ -488,14 +490,15 @@ body {
   /* line 7, src/sass/_layout.scss */
   .app-body,
   .app-footer-inner,
-  .app-header-inner {
+  .app-header-inner,
+  .app-nav-inner {
     max-width: 1020px;
   }
 }
 
-/* line 26, src/sass/_layout.scss */
+/* line 27, src/sass/_layout.scss */
 .app-body {
-  margin-top: 12rem;
+  margin-top: 18rem;
 }
 
 /* line 1, src/sass/_type.scss */
@@ -585,7 +588,100 @@ a {
   font-size: 1.2rem;
 }
 
+/* line 71, src/sass/_type.scss */
+.page-title {
+  text-align: center;
+  font-size: 3.4rem;
+}
+
 /* line 1, src/sass/_forms.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 7, src/sass/_forms.scss */
+label {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: .4rem;
+}
+
+/* line 13, src/sass/_forms.scss */
+input[type=text],
+textarea {
+  width: 100%;
+  margin-bottom: 1.6rem;
+  font-size: 1.6rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #d2d8de;
+  padding: .8rem 1.2rem .9rem;
+  outline: 0;
+  transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out;
+  box-shadow: 0 2px 0 0 #d2d8de;
+  border-radius: 0.2rem;
+}
+
+/* line 26, src/sass/_forms.scss */
+input[type=text]:hover, input[type=text]:focus,
+textarea:hover,
+textarea:focus {
+  border-color: #97a6b4;
+  box-shadow: 0 5px 0 0 #97a6b4;
+}
+
+/* line 32, src/sass/_forms.scss */
+input[type=text]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #97a6b4;
+  font-weight: 200;
+}
+input[type=text]:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #97a6b4;
+  font-weight: 200;
+}
+input[type=text]::placeholder,
+textarea::placeholder {
+  color: #97a6b4;
+  font-weight: 200;
+}
+
+/* line 37, src/sass/_forms.scss */
+.stl-insurer input[type=text], .stl-insurer
+textarea {
+  border-bottom-color: #6ed468;
+  box-shadow: 0 2px 0 0 #6ed468;
+}
+
+/* line 41, src/sass/_forms.scss */
+.stl-insurer input[type=text]:hover, .stl-insurer input[type=text]:focus, .stl-insurer
+textarea:hover, .stl-insurer
+textarea:focus {
+  border-bottom-color: #06ce40;
+  box-shadow: 0 5px 0 0 #06ce40;
+}
+
+/* line 48, src/sass/_forms.scss */
+.stl-consumer input[type=text], .stl-consumer
+textarea {
+  border-bottom-color: #35a9ff;
+  box-shadow: 0 2px 0 0 #35a9ff;
+}
+
+/* line 52, src/sass/_forms.scss */
+.stl-consumer input[type=text]:hover, .stl-consumer input[type=text]:focus, .stl-consumer
+textarea:hover, .stl-consumer
+textarea:focus {
+  border-bottom-color: #0087ff;
+  box-shadow: 0 5px 0 0 #0087ff;
+}
+
+/* line 60, src/sass/_forms.scss */
+button,
 .btn {
   color: #fff;
   font-weight: 600;
@@ -602,103 +698,45 @@ a {
   background-color: #4e697f;
 }
 
-/* line 14, src/sass/_forms.scss */
-.btn:hover, .btn:focus {
+/* line 74, src/sass/_forms.scss */
+button:hover, button:focus,
+.btn:hover,
+.btn:focus {
   background-color: #123b5e;
 }
 
-/* line 19, src/sass/_forms.scss */
+/* line 79, src/sass/_forms.scss */
+button.btn-disabled,
 .btn.btn-disabled {
   background-color: #d2d8de;
   cursor: default;
   pointer-events: none;
 }
 
-/* line 25, src/sass/_forms.scss */
-.stl-insurer .btn {
+/* line 85, src/sass/_forms.scss */
+.stl-insurer button, .stl-insurer
+.btn {
   background-color: #6ed468;
 }
 
-/* line 28, src/sass/_forms.scss */
-.stl-insurer .btn:hover, .stl-insurer .btn:focus {
+/* line 88, src/sass/_forms.scss */
+.stl-insurer button:hover, .stl-insurer button:focus, .stl-insurer
+.btn:hover, .stl-insurer
+.btn:focus {
   background-color: #06ce40;
 }
 
-/* line 34, src/sass/_forms.scss */
-.stl-consumer .btn {
+/* line 94, src/sass/_forms.scss */
+.stl-consumer button, .stl-consumer
+.btn {
   background-color: #35a9ff;
 }
 
-/* line 37, src/sass/_forms.scss */
-.stl-consumer .btn:hover, .stl-consumer .btn:focus {
+/* line 97, src/sass/_forms.scss */
+.stl-consumer button:hover, .stl-consumer button:focus, .stl-consumer
+.btn:hover, .stl-consumer
+.btn:focus {
   background-color: #0087ff;
-}
-
-/* line 44, src/sass/_forms.scss */
-label {
-  font-size: 1.2rem;
-  display: block;
-  margin-bottom: .4rem;
-}
-
-/* line 50, src/sass/_forms.scss */
-input[type=text] {
-  width: 100%;
-  margin-bottom: 1.6rem;
-  font-size: 1.6rem;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: 1px solid #d2d8de;
-  padding: .8rem 1.2rem .9rem;
-  outline: 0;
-  transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out;
-  box-shadow: 0 2px 0 0 #d2d8de;
-  border-radius: 0.2rem;
-}
-
-/* line 62, src/sass/_forms.scss */
-input[type=text]:hover, input[type=text]:focus {
-  border-color: #97a6b4;
-  box-shadow: 0 5px 0 0 #97a6b4;
-}
-
-/* line 68, src/sass/_forms.scss */
-input[type=text]::-webkit-input-placeholder {
-  color: #97a6b4;
-  font-weight: 200;
-}
-input[type=text]:-ms-input-placeholder {
-  color: #97a6b4;
-  font-weight: 200;
-}
-input[type=text]::placeholder {
-  color: #97a6b4;
-  font-weight: 200;
-}
-
-/* line 73, src/sass/_forms.scss */
-.stl-insurer input[type=text] {
-  border-bottom-color: #6ed468;
-  box-shadow: 0 2px 0 0 #6ed468;
-}
-
-/* line 77, src/sass/_forms.scss */
-.stl-insurer input[type=text]:hover, .stl-insurer input[type=text]:focus {
-  border-bottom-color: #06ce40;
-  box-shadow: 0 5px 0 0 #06ce40;
-}
-
-/* line 84, src/sass/_forms.scss */
-.stl-consumer input[type=text] {
-  border-bottom-color: #35a9ff;
-  box-shadow: 0 2px 0 0 #35a9ff;
-}
-
-/* line 88, src/sass/_forms.scss */
-.stl-consumer input[type=text]:hover, .stl-consumer input[type=text]:focus {
-  border-bottom-color: #0087ff;
-  box-shadow: 0 5px 0 0 #0087ff;
 }
 
 /* line 1, src/sass/_header.scss */
@@ -707,14 +745,45 @@ input[type=text]::placeholder {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 1;
 }
 
-/* line 8, src/sass/_header.scss */
+/* line 9, src/sass/_header.scss */
 .header-logo {
   color: #fff;
   margin: 1.4rem 0;
   height: 4rem;
   font-size: 3.4rem;
+}
+
+/* line 1, src/sass/_nav.scss */
+.app-nav {
+  background: #97a6b4;
+  position: fixed;
+  width: 100%;
+  top: 6.8rem;
+  box-shadow: 0 1.6rem 0 0 rgba(255, 255, 255, 0.2), 0 0.8rem 0 0 rgba(255, 255, 255, 0.6);
+  z-index: 1;
+}
+
+/* line 11, src/sass/_nav.scss */
+.nav-list li {
+  display: inline-block;
+  margin-right: 1.4rem;
+  transition: box-shadow .3s ease-in-out;
+}
+
+/* line 16, src/sass/_nav.scss */
+.nav-list li.selected, .nav-list li:hover {
+  box-shadow: inset 0 -0.4rem 0 0 #123b5e;
+}
+
+/* line 22, src/sass/_nav.scss */
+.nav-list a {
+  display: inline-block;
+  text-decoration: none;
+  padding-top: .6rem;
+  padding-bottom: .6rem;
 }
 
 /* line 1, src/sass/_footer.scss */
@@ -758,4 +827,105 @@ input[type=text]::placeholder {
 .team-members li {
   display: inline-block;
   margin-right: 1rem;
+}
+
+@-webkit-keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+            transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+            transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+            transform: translate3d(0, 5px, 0);
+  }
+  to {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+            transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+            transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+            transform: translate3d(0, 5px, 0);
+  }
+  to {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+/* line 29, src/sass/_illustration.scss */
+.illustration-container {
+  width: 9rem;
+  height: 13rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2rem;
+  background-image: url("/assets/icon-policy.svg");
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* line 40, src/sass/_illustration.scss */
+.illustration {
+  width: 9rem;
+  height: 11rem;
+  -webkit-animation-name: bounceInDown;
+          animation-name: bounceInDown;
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+/* line 49, src/sass/_illustration.scss */
+.illustration.new {
+  background-image: url("/assets/icon-new.svg");
+}
+
+/* line 53, src/sass/_illustration.scss */
+.illustration.claim {
+  background-image: url("/assets/icon-claim.svg");
+}
+
+/* line 57, src/sass/_illustration.scss */
+.illustration.cancel {
+  background-image: url("/assets/icon-cancel.svg");
 }

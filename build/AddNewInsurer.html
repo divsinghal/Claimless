@@ -42,11 +42,16 @@
   <fieldset>
 
     <div class="stl-insurer">
-      <label>Policy Number</label>
-      <input type="text" id="id" ng-model="policyNo" placeholder="placeholder">
+      <label>Company Name</label>
+      <input type="text" id="id" ng-model="comapanyName" placeholder="placeholder">
     </div>
 
-    <button class="btn" ng-click="policyExpired(policyNo)">Policy Expired</button>
+    <div class="stl-consumer">
+      <label>Company Key</label>
+      <input type="text" id="id" ng-model="comppanyKey" placeholder="placeholder">
+    </div>
+
+     <button class="btn" ng-click="addInsurer(comapanyName,comppanyKey)">Button</button>
 
 </fieldset>
   </div>
