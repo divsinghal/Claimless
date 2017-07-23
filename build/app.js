@@ -45725,7 +45725,7 @@ window.addEventListener('load', function() {
 
                                                                 
 
-  [ConvertLib,InsuranceProviderRegister,TokenManager,Migrations].forEach(function(contract) {         
+  [InsuranceProviderRegister,ConvertLib,Migrations,TokenManager].forEach(function(contract) {         
 
     contract.setProvider(window.web3.currentProvider);          
 
