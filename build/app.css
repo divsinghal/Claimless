@@ -514,7 +514,7 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-@media (min-width: 740px) {
+@media (min-width: 860px) {
   /* line 1, src/sass/_type.scss */
   html {
     font-size: 12px;
