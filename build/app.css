@@ -795,18 +795,24 @@ button.btn-disabled,
 }
 
 /* line 19, src/sass/_nav.scss */
-.nav-list li {
+.nav-list .spacer {
+  width: 2.4rem;
   display: inline-block;
-  margin-right: 1.4rem;
-  transition: box-shadow .3s ease-in-out;
 }
 
 /* line 24, src/sass/_nav.scss */
+.nav-list li {
+  display: inline-block;
+  margin-right: 1.2rem;
+  transition: box-shadow .3s ease-in-out;
+}
+
+/* line 29, src/sass/_nav.scss */
 .nav-list li.selected, .nav-list li:hover {
   box-shadow: inset 0 -0.4rem 0 0 #123b5e;
 }
 
-/* line 30, src/sass/_nav.scss */
+/* line 35, src/sass/_nav.scss */
 .nav-list a {
   display: inline-block;
   text-decoration: none;
