@@ -231,13 +231,13 @@ var SolidityEvent = require("web3/lib/web3/event.js");
 
   Contract.new = function() {
     if (this.currentProvider == null) {
-      throw new Error("ConvertLib error: Please call setProvider() first before calling new().");
+      throw new Error("InsuranceProviderRegister error: Please call setProvider() first before calling new().");
     }
 
     var args = Array.prototype.slice.call(arguments);
 
     if (!this.unlinked_binary) {
-      throw new Error("ConvertLib error: contract binary not set. Can't deploy new instance.");
+      throw new Error("InsuranceProviderRegister error: contract binary not set. Can't deploy new instance.");
     }
 
     var regex = /__[^_]+_+/g;
@@ -256,7 +256,7 @@ var SolidityEvent = require("web3/lib/web3/event.js");
         return name != arr[index + 1];
       }).join(", ");
 
-      throw new Error("ConvertLib contains unresolved libraries. You must deploy and link the following libraries before you can deploy a new version of ConvertLib: " + unlinked_libraries);
+      throw new Error("InsuranceProviderRegister contains unresolved libraries. You must deploy and link the following libraries before you can deploy a new version of InsuranceProviderRegister: " + unlinked_libraries);
     }
 
     var self = this;
@@ -297,7 +297,7 @@ var SolidityEvent = require("web3/lib/web3/event.js");
 
   Contract.at = function(address) {
     if (address == null || typeof address != "string" || address.length != 42) {
-      throw new Error("Invalid address passed to ConvertLib.at(): " + address);
+      throw new Error("Invalid address passed to InsuranceProviderRegister.at(): " + address);
     }
 
     var contract_class = this.web3.eth.contract(this.abi);
@@ -308,7 +308,7 @@ var SolidityEvent = require("web3/lib/web3/event.js");
 
   Contract.deployed = function() {
     if (!this.address) {
-      throw new Error("Cannot find deployed address: ConvertLib not deployed or address not set.");
+      throw new Error("Cannot find deployed address: InsuranceProviderRegister not deployed or address not set.");
     }
 
     return this.at(this.address);
@@ -350,33 +350,53 @@ var SolidityEvent = require("web3/lib/web3/event.js");
   "default": {
     "abi": [
       {
-        "constant": false,
+        "constant": true,
         "inputs": [
           {
-            "name": "amount",
-            "type": "uint256"
-          },
-          {
-            "name": "conversionRate",
-            "type": "uint256"
+            "name": "",
+            "type": "bytes32"
           }
         ],
-        "name": "convert",
+        "name": "entity",
         "outputs": [
           {
-            "name": "convertedAmount",
-            "type": "uint256"
+            "name": "",
+            "type": "address"
           }
         ],
         "payable": false,
         "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "name",
+            "type": "bytes32"
+          }
+        ],
+        "name": "unregister",
+        "outputs": [],
+        "payable": false,
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "name",
+            "type": "bytes32"
+          }
+        ],
+        "name": "register",
+        "outputs": [],
+        "payable": false,
+        "type": "function"
       }
     ],
-    "unlinked_binary": "0x6060604052346000575b6076806100176000396000f300606060405263ffffffff60e060020a60003504166396e4ee3d81146022575b6000565b602e6004356024356040565b60408051918252519081900360200190f35b8181025b929150505600a165627a7a7230582059e2693f0ede448f874009a0ef8478a0ff8d4dd350216f160c4e4e31e25379da0029",
+    "unlinked_binary": "0x606060405234610000575b61018b806100196000396000f300606060405263ffffffff60e060020a60003504166316a837fb811461003a5780631a0919dc14610066578063e1fa8e8414610078575b610000565b346100005761004a60043561008a565b60408051600160a060020a039092168252519081900360200190f35b34610000576100766004356100a5565b005b34610000576100766004356100fd565b005b600060208190529081526040902054600160a060020a031681565b600081815260208190526040902054600160a060020a0316158015906100ca57508015155b156100f9576000818152602081905260409020805473ffffffffffffffffffffffffffffffffffffffff191690555b5b50565b600081815260208190526040902054600160a060020a031615801561012157508015155b156100f9576000818152602081905260409020805473ffffffffffffffffffffffffffffffffffffffff191633600160a060020a03161790555b5b505600a165627a7a7230582051efbf2b947f1959eef7973f607be80b88a7f07eb7a08c55bbc3374080e72ecb0029",
     "events": {},
-    "updated_at": 1500813267017,
-    "links": {},
-    "address": "0x082e4a60265227fbb20a78504e6e56422aad8b43"
+    "updated_at": 1500813816089
   }
 };
 
@@ -461,7 +481,7 @@ var SolidityEvent = require("web3/lib/web3/event.js");
     Contract.links[name] = address;
   };
 
-  Contract.contract_name   = Contract.prototype.contract_name   = "ConvertLib";
+  Contract.contract_name   = Contract.prototype.contract_name   = "InsuranceProviderRegister";
   Contract.generated_with  = Contract.prototype.generated_with  = "3.2.0";
 
   // Allow people to opt-in to breaking changes now.
@@ -501,6 +521,6 @@ var SolidityEvent = require("web3/lib/web3/event.js");
   } else {
     // There will only be one version of this contract in the browser,
     // and we can use that.
-    window.ConvertLib = Contract;
+    window.InsuranceProviderRegister = Contract;
   }
 })();

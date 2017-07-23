@@ -52,13 +52,10 @@
       <input type="text" id="id" ng-model="consumer" placeholder="placeholder">
     </div>
 
-    <button class="btn" ng-click="searchCustomer(consumer)">Button</button>
+    <button class="btn" ng-click="getTokenBalance(consumer)">Button</button>
 
-    <!-- !!!!!!!! -->
-    <!-- Use span id="display-balance" to display balance -->
-    <!-- !!!!!!!! -->
-    <div class="customer-balance">
-      <h2>Your total balance is: <span id="display-balance">£.xxxx</span></h2>
+    <div class="stl-consumer">
+      <label>You total balance is </label><span id="tokensHeld" ng-model="tokensHeld"></span>
     </div>
 
 </fieldset>
